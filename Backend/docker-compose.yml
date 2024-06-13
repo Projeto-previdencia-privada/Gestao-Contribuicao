@@ -1,0 +1,24 @@
+services:
+  backend:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    ports:
+      - "8080:8080"
+    environment:
+      DB_HOST: ${DB_HOST}
+      DB_NAME: ${DB_NAME}
+      DB_USER: ${DB_USER}
+      DB_PASS: ${DB_PASS}
+      DB_PORT: ${DB_PORT}
+      APP_PORT: ${APP_PORT}
+      CONTRIBUINTES_API_HOST: ${CONTRIBUINTES_API_HOST}
+      CONTRIBUINTES_API_PORT: ${CONTRIBUINTES_API_PORT}
+    env_file:
+      - .env
+    volumes:
+      - db-data:/var/lib/postgresql/data
+
+volumes:
+  db-data:
+
