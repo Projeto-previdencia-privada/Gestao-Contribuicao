@@ -5,9 +5,11 @@ Este projeto frontend permite a interação com a API e visualização dos dados
 ## Tecnologias Utilizadas
 
 1. **Frontend**:
-    - Spring Boot 3.2.4: Para construção da API REST.
-    - PostgreSQL 16: Como banco de dados.
-    - Docker Compose 2.25: Para containerização da aplicação e dos serviços dependentes.
+    - React: Para a construção da interface de usuário.
+    - JavaScript: Como linguagem desenvolvimento.
+    - Nginx: Para servir a aplicação.
+    - Vite: Para o build e desenvolvimento rápido.
+    - Docker e Docker Compose: Para containerização da aplicação e orquestração dos serviços.
 
 ## Estrutura do Backend
 
@@ -28,7 +30,7 @@ Projeto-Gestao-Contribuicao/
 
 ### Adicione as seguintes variáveis ao arquivo .env:
 
-    VITE_API_BASE_URL= URL do serviço backend
+    VITE_API_BASE_URL=http://URL_DO_SERVICO_BACKEND:PORTA
 
 ## Execução com Docker Compose
 
