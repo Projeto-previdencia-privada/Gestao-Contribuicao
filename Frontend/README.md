@@ -2,6 +2,10 @@
 
 Este projeto frontend permite a interação com a API e visualização dos dados.
 
+## Guia de Instalação
+
+Para iniciar o Projeto deverá ser instalado o pacote @gov-ds/core do site do [Gov.br](https://www.gov.br/ds/como-comecar/instalacao)
+
 ## Tecnologias Utilizadas
 
 1. **Frontend**:
