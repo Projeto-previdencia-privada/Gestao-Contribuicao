@@ -1,0 +1,17 @@
+services:
+  db_rpps:
+    container_name: db_rpps
+    image: postgres:16.2
+    volumes:
+      - rpps-data:/var/lib/postgresql/data
+    environment:
+      POSTGRES_USER: ${POSTGRES_USER}
+      POSTGRES_PASSWORD: ${POSTGRES_PASSWORD}
+      POSTGRES_DB: db_rpps
+      PGPORT: ${PGPORT}
+    ports:
+      - ${PGPORT}:5434
+    env_file:
+      .env
+volumes:
+  rpps-data:

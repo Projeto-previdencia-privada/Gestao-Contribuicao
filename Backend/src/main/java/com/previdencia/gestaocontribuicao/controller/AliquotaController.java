@@ -40,18 +40,6 @@ public class AliquotaController {
         return ResponseEntity.ok(aliquotas);
     }
 
-    @Operation(summary = "Busca aliquota por ID", description = "Retorna a aliquota correspondente ao ID fornecido.")
-    @ApiResponse(responseCode = "200", description = "Aliquota encontrada com sucesso")
-    @ApiResponse(responseCode = "404", description = "Aliquota não encontrada")
-    @GetMapping("/{id}")
-    public ResponseEntity<Aliquota> buscarAliquotaPorId(@PathVariable Long id) {
-        try {
-            Aliquota aliquota = aliquotaService.buscarPorId(id);
-            return ResponseEntity.ok(aliquota);
-        } catch (RuntimeException e) {
-            return ResponseEntity.status(HttpStatus.NOT_FOUND).body(null);
-        }
-    }
 
     @Operation(summary = "Busca aliquota por categoria", description = "Retorna a aliquota correspondente à categoria fornecida.")
     @ApiResponse(responseCode = "200", description = "Aliquota encontrada com sucesso")
