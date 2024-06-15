@@ -4,9 +4,9 @@ Este repositório contém os componentes do sistema de Gestão de Contribuiçõe
 
 ## Estrutura do Repositório
 
-- **backend**: Contém o código-fonte do serviço backend que lida com as operações relacionadas às alíquotas e contribuições.
+- **backend**: Contém a Docmentação da API e o código-fonte do serviço backend que lida com as operações relacionadas às alíquotas e contribuições.
 - **frontend**: Contém o código-fonte do frontend da aplicação, que fornece uma interface de usuário para interação com o sistema.
-- **banco_de_dados**: Contém os scripts de banco de dados e as configurações relacionadas ao PostgreSQL.
+- **banco_de_dados**: Contém o MER e o DER e os scripts de banco de dados e as configurações relacionadas ao PostgreSQL.
 
 ## Instruções de Configuração e Execução
 
