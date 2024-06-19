@@ -6,14 +6,16 @@ const Footer = () => {
     <footer className="br-footer">
       <div className="container-lg">
         <div className="logo">
-          <img src={Govlogonegativa} alt="Imagem" />
+          <a href="https://www.gov.br/pt-br" style={{ cursor: 'pointer' }}>
+            <img src={Govlogonegativa} alt="Logo do GovBR" />
+          </a>
         </div>
         <div className="br-list horizontal" data-toggle="data-toggle" data-sub="data-sub">
           {[
             {
               categoria: "Navegação",
               links: [
-                { label: "Home", path: "/" },
+                { label: "Home", path: "http://192.168.37.8:8090/" },
                 { label: "Listar Alíquotas", path: "/aliquotas" },
                 { label: "Criar Alíquotas", path: "/aliquotas/criar" },
                 { label: "Deletar Alíquotas", path: "/aliquotas/deletar" },

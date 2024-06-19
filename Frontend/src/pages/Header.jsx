@@ -15,9 +15,9 @@ const Header = () => {
     <header className="br-header small">
       <div className="container-lg">
         <div className="header-top">
-          <href to="http://192.168.37.8:8090/" className="header-logo" style={{ cursor: 'pointer' }}>
+          <a href="https://www.gov.br/pt-br" className="header-logo" style={{ cursor: 'pointer' }}>
             <img src={Govlogo} alt="Logo do GovBR" />
-          </href>
+          </a>
           <div className="header-actions">
             <div className="header-links dropdown">
               <button
@@ -46,7 +46,7 @@ const Header = () => {
                 </a>
               </div>
             </div>
-            <span className="br-divider vertical mx-half mx-sm-1"></span>
+            
             <div className="header-functions dropdown">
               <button
                 className="br-button circle small"
@@ -60,16 +60,7 @@ const Header = () => {
                 <div className="header">
                   <div className="title">Funcionalidades do Sistema</div>
                 </div>
-                <div className="br-item">
-                  <button
-                    className="br-button circle small"
-                    type="button"
-                    aria-label="Funcionalidade 4"
-                  >
-                    <i className="fas fa-adjust" aria-hidden="true"></i>
-                    <span className="text">Funcionalidade 4</span>
-                  </button>
-                </div>
+                
               </div>
             </div>
             <div className="header-search-trigger">

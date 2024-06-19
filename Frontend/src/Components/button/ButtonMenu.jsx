@@ -10,6 +10,13 @@ const ButtonMenu = () => {
             <div className="menu-panel h-auto position-static shadow-lg-right">
               <nav className="menu-body">
                 <div className="menu-folder">
+                <a className="menu-item" href="http://192.168.37.8:8090/">
+                    <span className="icon">
+                      <i className="fas fa-bell" aria-hidden="true"></i>
+                    </span>
+                    <span className="content">Home</span> 
+                    </a>                               
+                  
                   <Link className="menu-item" to="#">
                     <span className="icon">
                       <i className="fas fa-book" aria-hidden="true"></i>
