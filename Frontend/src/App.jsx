@@ -30,7 +30,7 @@ const App = () => {
           <Route path="aliquotas/criar" element={<AliquotaCreate />} />
           <Route path="aliquotas/editar" element={<AliquotaEdit />} />
           <Route path="aliquotas/deletar" element={<AliquotaDelete />} />
-          <Route path="contribuintes/consultar" element={<ContribuinteConsulta />} />
+          <Route path="contribuintes/contribuinte" element={<ContribuinteConsulta />} />
           <Route path="*" element={<NotFoundPage />} />
         </Route>
       </Routes>

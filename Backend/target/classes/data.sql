@@ -19,7 +19,8 @@ INSERT INTO contribuicao.aliquota (categoria, salario_inicio, salario_fim, valor
                                                                                          ('Facultativo', 4000.00, 150000.00, 20),
                                                                                          ('MEI', 1412.00, 2666.69, 5),
                                                                                          ('MEI', 2666.70, 4000.03, 11),
-                                                                                         ('MEI', 4000.00, 150000.00, 20);
+                                                                                         ('MEI', 4000.00, 150000.00, 20)
+                                                                                        ON CONFLICT (categoria, salario_inicio, salario_fim, valor_aliquota) DO NOTHING;
 
 
 INSERT INTO contribuicao.salario_minimo_historico (data_minimo, valor_salario_minimo_ano) VALUES

@@ -11,7 +11,13 @@ CREATE TABLE IF NOT EXISTS contribuicao.aliquota
     CONSTRAINT uniq_aliquota UNIQUE (categoria, salario_inicio, salario_fim, valor_aliquota)
     );
 
-CREATE SEQUENCE contribuicao.salario_minimo_historico_id_seq;
+
+CREATE SEQUENCE IF NOT EXISTS contribuicao.salario_minimo_historico_id_seq
+    START WITH 1
+    INCREMENT BY 1
+    NO MINVALUE
+    NO MAXVALUE
+    CACHE 1;
 
 CREATE TABLE IF NOT EXISTS contribuicao.salario_minimo_historico
 (
