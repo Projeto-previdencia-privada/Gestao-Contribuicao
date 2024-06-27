@@ -1,4 +1,4 @@
-// src/pages/AliquotaList.jsx
+
 import { useState, useEffect } from "react";
 import api from "../axiosconfig";
 import "../Form/Form.css"; // Importação do CSS

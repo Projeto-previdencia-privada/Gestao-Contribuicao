@@ -17,7 +17,6 @@ Projeto-Gestao-Contribuicao/
 ├── backend/
 │   ├── Dockerfile
 │   ├── src/
-│   ├── target/
 │   ├── docker-compose.yml
 │   ├── Dockerfile
 │   ├── pom.xml
@@ -71,24 +70,56 @@ As aliquotas são utilizadas para calcular o valor da contribuição com base na
 ## Obter  os dados do Contribuinte via API Contribuintes
 
 -  consulta contribuinte(API GESTÃO CONTRIBUINTES).
-    * GET `/contribuintes/07442619029`
-    * Descrição: Retorna detalhes sobre o contribuinte TESTE;
-- Exemplo de Dados esperados:
+    * GET `/contribuintes/contribuinte/{cpf}`
+    * Descrição: Retorna detalhes sobre o contribuinte da Api dos Contribuintes, exemplo;
+- Exemplo de exemplo:
+  
 ```bash
 {
   "cpf": "84688392052",
   "categoria": "MEI",
   "salario": 7500.00,
-  "inicio_contribuicao": "01/01/2020"
+  
 }
+
 ```
 
 - Exemplo de Dados do contribuinte calculados
-    * GET `/contribuintes/consultar/07442619029`
+    * POST `/contribuintes/calcularc/contribuiçoes`
+    * Descrição: Recebe CPF e períodos de contribuição para calcular o total contribuído.
+- Dados de exemplo:
+
+```bash
+{
+  "cpf": "84688392052",
+  "periodos": ["2020-01-01", "2021-01-01"]
+}  
+
+
+
+- Dados de resposta exemplo:
+
+
+{
+  "CPF": "84688392052",
+  "Categoria": "MEI",
+  "Salário": "7500",
+  "Alíquota": "20",
+  "periodosContribuicao": ["2020-01-01", "2021-01-01"]
+  "tempoContribuicaoMeses": 53,
+  "ValorContribuilçãoMensal": "1500",
+  "TotalContribuido(Sem Ajuste)": "79.500",
+  "ValorAjusteAplicado": "28540.42",
+  "Total Contribuido (Ajustado)": 144308.18
+}
+
+```
+- Exemplo de Dados do contribuinte calculados
+    * GET `/contribuintes/consultar/{cpf}`
     * Descrição: Retorna detalhes sobre o contribuinte, incluindo tempo total
       de contribuição em meses e o total contribuído ajustado, considerando o
       salário, categoria, e variações do salário mínimo.
-- Dados esperados (Podem variar de acordo com o mês que a aplicação está sendo testada):
+- Dados de exemplo:
 ```bash
 {
   "CPF": "84688392052",
